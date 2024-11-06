@@ -16,6 +16,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        ProductManager productManager = new ProductManager();
+
         boolean flag = true;
         while (flag) {
             int command = 0;
@@ -29,6 +31,7 @@ public class Main {
             switch (command) {
                 case 1:
                     System.out.println("\nAdd new product");
+                    productManager.addProduct(scanner);
                     break;
                 case 2:
                     System.out.println("\nRemove product");

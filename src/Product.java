@@ -3,11 +3,11 @@ import java.util.UUID;
 public class Product {
     private final String name;
     private final String productId;
-    private String category;
+    private Category category;
     private float price;
     private int quantity;
 
-    public Product(String name, String category, float price, int quantity) {
+    public Product(String name, Category category, float price, int quantity) {
         this.name = name;
         this.productId = UUID.randomUUID().toString();
         this.category = category;
@@ -24,7 +24,7 @@ public class Product {
         return productId;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
@@ -45,7 +45,7 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 }
