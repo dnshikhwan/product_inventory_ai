@@ -1,12 +1,12 @@
 /*
 1. Add new product [X]
 2. Remove by product id [X]
-3. Update product info []
+3. Update product info [X]
 4. View all products [X]
-5. Search product by name or category []
+5. Search product by name or category [X]
 6. Product recommendation []
-7. Check product availability []
-8. Inventory value calculation []
+7. Check product availability [X]
+8. Inventory value calculation [X]
 9. Product popularity analysis []
  */
 
@@ -40,8 +40,9 @@ public class Main {
                     productManager.removeProductById(scanner);
                     break;
                 case 3:
-                    System.out.println("\nUpdate product info");
+                    System.out.println("\nUpdate product details");
                     System.out.println("_____________");
+                    productManager.updateProduct(scanner);
                     break;
                 case 4:
                     System.out.println("\nView all products");
@@ -51,6 +52,7 @@ public class Main {
                 case 5:
                     System.out.println("\nSearch a product");
                     System.out.println("_____________");
+                    productManager.displayFoundProduct(scanner);
                     break;
                 case 6:
                     System.out.println("\nProduct recommendation");
@@ -59,16 +61,21 @@ public class Main {
                 case 7:
                     System.out.println("\nCheck product availability");
                     System.out.println("_____________");
+                    productManager.productAvailability(scanner);
                     break;
                 case 8:
                     System.out.println("\nInventory value");
                     System.out.println("_____________");
+                    productManager.totalInventory();
                     break;
                 case 9:
                     System.out.println("\nPopular product");
                     System.out.println("_____________");
                     break;
                 case 10:
+                    System.out.println("\nPurchase a product");
+                    System.out.println("_____________");
+                case 11:
                     System.out.println("\nGoodbye");
                     flag = false;
                     break;
@@ -92,6 +99,7 @@ public class Main {
         System.out.println("7. Check product availability");
         System.out.println("8. Inventory value");
         System.out.println("9. Popular product");
-        System.out.println("10. Exit");
+        System.out.println("10. Purchased product");
+        System.out.println("11. Exit");
     }
 }
