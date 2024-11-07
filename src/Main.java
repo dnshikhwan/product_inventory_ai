@@ -1,8 +1,8 @@
 /*
-1. Add new product []
+1. Add new product [X]
 2. Remove by product id []
 3. Update product info []
-4. View all products []
+4. View all products [X]
 5. Search product by name or category []
 6. Product recommendation []
 7. Check product availability []
@@ -41,6 +41,7 @@ public class Main {
                     break;
                 case 4:
                     System.out.println("\nView all products");
+                    productManager.displayAllProduct();
                     break;
                 case 5:
                     System.out.println("\nSearch a product");

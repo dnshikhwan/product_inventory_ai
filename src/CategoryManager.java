@@ -1,3 +1,4 @@
+import java.awt.print.Book;
 import java.util.ArrayList;
 
 public class CategoryManager {
@@ -15,14 +16,13 @@ public class CategoryManager {
         categories.add(category);
     }
 
-    public boolean checkIfCategoryExists(String categoryName) {
+    public Category checkIfCategoryExists(String categoryName) {
         for (Category category : categories) {
             if (category.getName().equals(categoryName)) {
-                return true;
+                return category;
             }
         }
-
-        return false;
+        return null;
     }
 
     public void displayAllCategories() {
