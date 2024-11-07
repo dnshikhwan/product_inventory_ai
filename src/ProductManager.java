@@ -53,7 +53,30 @@ public class ProductManager {
         Product product = new Product(productName, productCategory, productPrice, productQuantity);
         products.put(product.getProductId(), product);
 
-        System.out.println("Product created\n");
+        System.out.println("\nProduct created");
+        System.out.println("__________");
+        displayProduct(product);
+    }
+
+    public void removeProductById(Scanner scanner) {
+        System.out.println("Please enter product id: ");
+        String productId = scanner.nextLine();
+
+        if (products.containsKey(productId)) {
+            products.remove(productId);
+            System.out.println("Product with product id " + productId + " removed\n");
+        } else {
+            System.out.println("Cannot find product with that id\n");
+        }
+    }
+
+    public void displayProduct(Product product) {
+        System.out.println("Product name: " + product.getName());
+        System.out.println("Product Id: " + product.getProductId());
+        System.out.println("Product category: " + product.getCategory().getName());
+        System.out.println("Product price: " + product.getPrice());
+        System.out.println("Product quantity: " + product.getQuantity());
+        System.out.println();
     }
 
 
@@ -68,6 +91,8 @@ public class ProductManager {
                 System.out.println("Product quantity: " + product.getQuantity());
                 System.out.println();
             }
+        } else {
+            System.out.println("There is no product available, please add one\n");
         }
     }
 

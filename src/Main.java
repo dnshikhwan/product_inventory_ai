@@ -1,6 +1,6 @@
 /*
 1. Add new product [X]
-2. Remove by product id []
+2. Remove by product id [X]
 3. Update product info []
 4. View all products [X]
 5. Search product by name or category []
@@ -31,32 +31,42 @@ public class Main {
             switch (command) {
                 case 1:
                     System.out.println("\nAdd new product");
+                    System.out.println("_____________");
                     productManager.addProduct(scanner);
                     break;
                 case 2:
                     System.out.println("\nRemove product");
+                    System.out.println("_____________");
+                    productManager.removeProductById(scanner);
                     break;
                 case 3:
                     System.out.println("\nUpdate product info");
+                    System.out.println("_____________");
                     break;
                 case 4:
                     System.out.println("\nView all products");
+                    System.out.println("_____________");
                     productManager.displayAllProduct();
                     break;
                 case 5:
                     System.out.println("\nSearch a product");
+                    System.out.println("_____________");
                     break;
                 case 6:
                     System.out.println("\nProduct recommendation");
+                    System.out.println("_____________");
                     break;
                 case 7:
                     System.out.println("\nCheck product availability");
+                    System.out.println("_____________");
                     break;
                 case 8:
                     System.out.println("\nInventory value");
+                    System.out.println("_____________");
                     break;
                 case 9:
                     System.out.println("\nPopular product");
+                    System.out.println("_____________");
                     break;
                 case 10:
                     System.out.println("\nGoodbye");
